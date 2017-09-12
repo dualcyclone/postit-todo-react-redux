@@ -1,0 +1,8 @@
+.itemsList-ul {
+  list-style: none;
+}
+
+.itemsList-ul {
+  overflow: hidden;
+  padding: 3em;
+}
