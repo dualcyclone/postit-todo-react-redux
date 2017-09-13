@@ -1,14 +1,22 @@
-li {
+.itemCreator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+li, .itemCreator {
     padding: 5px;
     margin: 1em;
     float: left;
     list-style: none;
 }
 
-li div {
+li div, .itemCreator div {
     text-decoration: none;
     font-family: 'Nothing You Could Do', cursive;
     color: #000;
+    background-color: #fff;
     display: block;
     height: 10em;
     width: 10em;
@@ -17,6 +25,14 @@ li div {
     transition: -webkit-transform .15s linear;
     transform: rotate(-6deg);
     overflow: hidden;
+}
+
+.itemCreator div {
+    box-shadow: -5px 5px 7px rgba(33,33,33,.7);
+}
+
+.itemCreator div textarea {
+    resize: none;
 }
 
 li.complete div p {
@@ -77,28 +93,29 @@ li:nth-child(5n) div {
     top: -10px;
 }
 
-li div:hover, li div:focus{
+li div:hover, li div:focus, 
+.itemCreator div:hover, .itemCreator div:focus  {
     box-shadow: 10px 10px 7px rgba(0,0,0,.7);
     transform: scale(1.25);
     position: relative;
     z-index: 5;
 }
 
-li div .icon {
+li div .icon, .itemCreator div .icon {
     display: block;
     position: absolute;
     visibility: hidden;
 }
 
-li div:hover .icon {
+li div:hover .icon, .itemCreator div:hover .icon  {
     visibility: visible;
 }
 
-li div .icon {
+li div .icon, .itemCreator div .icon {
     color: #000;
 }
 
-li div .icono-trash {
+li div .icono-trash, .itemCreator div .icono-plusCircle {
     bottom: 2px;
     right: 2px;
 }

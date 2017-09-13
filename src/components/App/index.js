@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemCreator from '../ItemCreator';
+import ItemCreator from '../Item/ItemCreator';
 import ItemsList from '../ItemsList';
 import './styles.css';
 
