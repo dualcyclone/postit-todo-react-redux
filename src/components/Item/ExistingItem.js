@@ -5,7 +5,7 @@ import { completeItem, removeItem } from '../../main/actions';
 import Item from './Item';
 import './styles.css';
 
-const ExistingItem = ({ item, onDoneClick, onRemoveClick }) => (
+export const ExistingItem = ({ item, onDoneClick, onRemoveClick }) => (
   <Item 
     className={ item.completed ? 'complete' : 'todo' }
     color={ item.color }>

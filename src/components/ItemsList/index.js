@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import ExistingItem from '../Item/ExistingItem';
 import './styles.css';
 
-const ItemsList = ({ items }) => {
+export const ItemsList = ({ items }) => {
   return (
     <div>
       { items.length > 0 &&
-        <ul className={'itemsList-ul'}>
+        <ul className="itemsList-ul">
           { items.map(item => (
-            <ExistingItem key={item.id} item={item} />
+            <ExistingItem key={ item.id } item={ item } />
           )) }
         </ul>
       }
@@ -19,7 +19,7 @@ const ItemsList = ({ items }) => {
 }
 
 ItemsList.propTypes = {
-  items: PropTypes.array.isRequired,
+  items: PropTypes.array.isRequired
 };
 
 const mapStateToProps = (state) => {
