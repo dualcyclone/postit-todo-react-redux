@@ -6,7 +6,9 @@ import Item from './Item';
 import './styles.css';
 
 const ExistingItem = ({ item, onDoneClick, onRemoveClick }) => (
-  <Item item={ item }>
+  <Item 
+    className={ item.completed ? 'complete' : 'todo' }
+    color={ item.color }>
       <p>{ item.content }</p>
       <a onClick={onDoneClick} className="icon icono-cross">&nbsp;</a>
       <a onClick={onDoneClick} className="icon icono-check">&nbsp;</a>

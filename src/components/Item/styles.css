@@ -5,14 +5,14 @@
     z-index: 100;
 }
 
-li, .itemCreator {
+.todoItem {
     padding: 5px;
     margin: 1em;
     float: left;
     list-style: none;
 }
 
-li div, .itemCreator div {
+.todoItem div {
     text-decoration: none;
     font-family: 'Nothing You Could Do', cursive;
     color: #000;
@@ -35,11 +35,11 @@ li div, .itemCreator div {
     resize: none;
 }
 
-li.complete div p {
+.todoItem.complete div p {
     text-decoration: line-through;
 }
 
-li.complete div p:before {
+.todoItem.complete div p:before {
     position: absolute;
     content: '';
     background: #000;
@@ -54,7 +54,7 @@ li.complete div p:before {
     margin: auto;
 }
 
-li.complete div p:after {
+.todoItem.complete div p:after {
     position: absolute;
     content: '';
     background: #000;
@@ -69,66 +69,67 @@ li.complete div p:after {
     margin: auto;
 }
 
-li:nth-child(even) div {
+.todoItem:nth-child(even) div {
     transform: rotate(4deg);
     position: relative;
     top: 5px;
 }
 
-li:nth-child(3n) div {
+.todoItem:nth-child(3n) div {
     transform: rotate(-3deg);
     position: relative;
     top: -5px;
 }
 
-li:nth-child(4n) div {
+.todoItem:nth-child(4n) div {
     transform: rotate(2deg);
     position: relative;
     top: -5px;
 }
 
-li:nth-child(5n) div {
+.todoItem:nth-child(5n) div {
     transform: rotate(5deg);
     position: relative;
     top: -10px;
 }
 
-li div:hover, li div:focus, 
-.itemCreator div:hover, .itemCreator div:focus  {
+.todoItem div:hover, .todoItem div:focus {
     box-shadow: 10px 10px 7px rgba(0,0,0,.7);
     transform: scale(1.25);
     position: relative;
     z-index: 5;
 }
 
-li div .icon, .itemCreator div .icon {
+.todoItem div .icon {
     display: block;
     position: absolute;
     visibility: hidden;
 }
 
-li div:hover .icon, .itemCreator div:hover .icon  {
+.todoItem div:hover .icon {
     visibility: visible;
 }
 
-li div .icon, .itemCreator div .icon {
+.todoItem div .icon {
     color: #000;
 }
 
-li div .icono-trash, .itemCreator div .icono-plusCircle {
+.todoItem div .icono-trash, 
+.itemCreator div .icono-plusCircle {
     bottom: 2px;
     right: 2px;
 }
 
-li div .icono-check, li div .icono-cross {
+.todoItem div .icono-check, 
+.todoItem div .icono-cross {
     bottom: 2px;
     left: 2px;
 }
 
-li.complete div .icono-check {
+.todoItem.complete div .icono-check {
     display: none;
 }
 
-li.todo div .icono-cross {
+.todoItem.todo div .icono-cross {
     display: none;
 }
