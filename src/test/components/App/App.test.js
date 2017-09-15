@@ -1,13 +1,18 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import { App } from '../../../../src/components/App/index';
 import ItemCreator from '../../../../src/components/Item/ItemCreator';
 import ItemsList from '../../../../src/components/ItemsList';
 
+const jestExpect = global.expect;
+
 describe('App', () => {
   it('Should render without failing', () => {
-    shallow(<App />);
+    const renderedItem = shallow(<App />);
+
+    jestExpect(toJson(renderedItem)).toMatchSnapshot();
   });
 
   it('Should render with the class of "app"', () => {

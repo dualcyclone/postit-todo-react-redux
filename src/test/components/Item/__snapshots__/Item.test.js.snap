@@ -1,0 +1,18 @@
+exports[`Item Should render without failing 1`] = `
+<li
+  className="todoItem todo">
+  <div
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }>
+    <p>
+      hello 1
+    </p>
+    <p>
+      hello 2
+    </p>
+  </div>
+</li>
+`;

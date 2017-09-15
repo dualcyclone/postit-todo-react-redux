@@ -2,8 +2,11 @@ import React from 'react';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import { ExistingItem } from '../../../../src/components/Item/ExistingItem';
 import Item from '../../../../src/components/Item/Item';
+
+const jestExpect = global.expect;
 
 const defaultProps = { 
   item: {
@@ -17,7 +20,9 @@ const defaultProps = {
 
 describe('ExistingItem', () => {
   it('Should render without failing', () => {
-    shallow(<ExistingItem {...defaultProps} />);
+    const renderedItem = shallow(<ExistingItem {...defaultProps} />);
+
+    jestExpect(toJson(renderedItem)).toMatchSnapshot();
   });
 
   it('Should render with the class of "todo"', () => {

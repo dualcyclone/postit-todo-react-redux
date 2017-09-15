@@ -1,0 +1,7 @@
+exports[`App Should render without failing 1`] = `
+<div
+  className="app">
+  <Connect(ItemCreator) />
+  <Connect(Component) />
+</div>
+`;

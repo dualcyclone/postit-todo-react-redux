@@ -1,0 +1,22 @@
+exports[`ItemCreator Should render without failing 1`] = `
+<Component
+  ElementType="div"
+  className="itemCreator">
+  <p>
+    Add another item...
+  </p>
+  <textarea
+    className="itemCreator-input"
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="What do you need to do?"
+    rows="8"
+    type="text"
+    value="" />
+  <a
+    className="icon icono-plusCircle"
+    onClick={[Function]}>
+     
+  </a>
+</Component>
+`;

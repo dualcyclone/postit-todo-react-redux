@@ -3,10 +3,12 @@ import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import { ItemCreator } from '../../../../src/components/Item/ItemCreator';
 import Item from '../../../../src/components/Item/Item';
 
 chai.use(sinonChai);
+const jestExpect = global.expect;
 
 const defaultProps = { 
   onAdd: sinon.stub()
@@ -14,7 +16,9 @@ const defaultProps = {
 
 describe('ItemCreator', () => {
   it('Should render without failing', () => {
-    shallow(<ItemCreator {...defaultProps} />);
+    const renderedItem = shallow(<ItemCreator {...defaultProps} />);
+
+    jestExpect(toJson(renderedItem)).toMatchSnapshot();
   });
 
   it('Should render with the class of "itemCreator"', () => {

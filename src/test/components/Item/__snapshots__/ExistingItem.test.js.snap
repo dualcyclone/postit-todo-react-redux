@@ -1,0 +1,24 @@
+exports[`ExistingItem Should render without failing 1`] = `
+<Component
+  className="todo"
+  color="#456">
+  <p>
+    TEST TODO
+  </p>
+  <a
+    className="icon icono-cross"
+    onClick={[Function]}>
+     
+  </a>
+  <a
+    className="icon icono-check"
+    onClick={[Function]}>
+     
+  </a>
+  <a
+    className="icon icono-trash"
+    onClick={[Function]}>
+     
+  </a>
+</Component>
+`;

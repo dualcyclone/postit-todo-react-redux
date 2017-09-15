@@ -1,7 +1,10 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import { Item } from '../../../../src/components/Item/Item';
+
+const jestExpect = global.expect;
 
 const defaultProps = { 
   className: 'todo', 
@@ -13,7 +16,9 @@ const defaultProps = {
 
 describe('Item', () => {
   it('Should render without failing', () => {
-    shallow(<Item {...defaultProps} />);
+    const renderedItem = shallow(<Item {...defaultProps} />);
+
+    jestExpect(toJson(renderedItem)).toMatchSnapshot();
   });
 
   it('Should render with the class of "todoItem"', () => {
