@@ -3,12 +3,10 @@ import ItemCreator from '../Item/ItemCreator';
 import ItemsList from '../ItemsList';
 import './styles.css';
 
-const App = () => (
+export const App = () => (
   <div className="app">
-    <div>
-      <ItemCreator />
-      <ItemsList />
-    </div>
+    <ItemCreator />
+    <ItemsList />
   </div>
 );
 

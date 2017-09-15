@@ -1,24 +1,19 @@
-import { ADD_ITEM, COMPLETE_ITEM, REMOVE_ITEM, TODOLIST_PERSISTANCE } from './constants';
+import { ADD_ITEM, COMPLETE_ITEM, REMOVE_ITEM } from './constants';
+import { getInitialState, getNewIndex } from './state';
 import Item from './Item';
 
-const DEFAULT_STATE = { items: [] };
-const PERSISTED_STATE = JSON.parse(localStorage.getItem(TODOLIST_PERSISTANCE));
-
-const initialState = PERSISTED_STATE || DEFAULT_STATE;
-let ITEM_INDEX = initialState.items.length !== 0 ? Math.max.apply(null, PERSISTED_STATE.items.map(i => i.id)) : 0;
-
-const reducer = (state = initialState, action) => {
+const reducer = (state = getInitialState(), action) => {
   let oldItems = state.items;
   let newItems;
   let itemIndex;
 
   switch (action.type) {
     case ADD_ITEM:
+      let newIndex = getNewIndex();
       oldItems = state.items;
-      ITEM_INDEX += 1;
       newItems = [
         ...oldItems,
-        new Item(ITEM_INDEX, action.content)
+        new Item(newIndex, action.content)
       ];
 
       return Object.assign({}, state, {
