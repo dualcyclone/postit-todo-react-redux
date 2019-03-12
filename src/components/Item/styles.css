@@ -104,6 +104,7 @@
     display: block;
     position: absolute;
     visibility: hidden;
+    background: transparent;
 }
 
 .todoItem div:hover .icon {
@@ -112,16 +113,18 @@
 
 .todoItem div .icon {
     color: #000;
+    background: transparent;
 }
 
-.todoItem div .icono-trash, 
+.todoItem div .icono-trash,
 .itemCreator div .icono-plusCircle {
     bottom: 2px;
     right: 2px;
 }
 
-.todoItem div .icono-check, 
+.todoItem div .icono-check,
 .todoItem div .icono-cross {
+    border: 0;
     bottom: 2px;
     left: 2px;
 }

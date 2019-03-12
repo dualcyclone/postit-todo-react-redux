@@ -1,7 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ItemCreator Should render without failing 1`] = `
-<Component
+<Item
   ElementType="div"
-  className="itemCreator">
+  className="itemCreator"
+>
   <p>
     Add another item...
   </p>
@@ -12,11 +15,13 @@ exports[`ItemCreator Should render without failing 1`] = `
     placeholder="What do you need to do?"
     rows="8"
     type="text"
-    value="" />
-  <a
+    value=""
+  />
+  <button
     className="icon icono-plusCircle"
-    onClick={[Function]}>
-     
-  </a>
-</Component>
+    onClick={[Function]}
+  >
+    &nbsp
+  </button>
+</Item>
 `;
