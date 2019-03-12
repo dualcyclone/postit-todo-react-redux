@@ -1,6 +1,7 @@
 {
   "name": "postit-todo-list",
   "version": "1.0.0",
+  "homepage" : "http://dualcyclone.js.org",
   "dependencies": {
     "prop-types": "^15.7.2",
     "randomcolor": "^0.5.3",
