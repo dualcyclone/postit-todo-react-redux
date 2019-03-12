@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import ExistingItem from '../Item/ExistingItem';
-import './styles.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import ExistingItem from '../Item/ExistingItem'
+import './styles.css'
 
 export const ItemsList = ({ items }) => {
   return (
@@ -15,19 +15,19 @@ export const ItemsList = ({ items }) => {
         </ul>
       }
     </div>
-  );
+  )
 }
 
 ItemsList.propTypes = {
   items: PropTypes.array.isRequired
-};
+}
 
 const mapStateToProps = (state) => {
   return {
     items: state.items
-  };
-};
+  }
+}
 
 export default connect(
   mapStateToProps
-)(ItemsList);
+)(ItemsList)
