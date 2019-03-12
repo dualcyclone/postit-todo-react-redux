@@ -1,16 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Item Should render without failing 1`] = `
 <li
-  className="todoItem todo">
+  className="todoItem todo"
+>
   <div
     style={
       Object {
         "backgroundColor": undefined,
       }
-    }>
-    <p>
+    }
+  >
+    <p
+      key="1"
+    >
       hello 1
     </p>
-    <p>
+    <p
+      key="2"
+    >
       hello 2
     </p>
   </div>

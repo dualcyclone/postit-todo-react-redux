@@ -1,24 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ExistingItem Should render without failing 1`] = `
-<Component
+<Item
   className="todo"
-  color="#456">
+  color="#456"
+>
   <p>
     TEST TODO
   </p>
   <a
     className="icon icono-cross"
-    onClick={[Function]}>
-     
+    onClick={[Function]}
+  >
+    &nbsp
   </a>
   <a
     className="icon icono-check"
-    onClick={[Function]}>
-     
+    onClick={[Function]}
+  >
+    &nbsp
   </a>
   <a
     className="icon icono-trash"
-    onClick={[Function]}>
-     
+    onClick={[Function]}
+  >
+    &nbsp
   </a>
-</Component>
+</Item>
 `;

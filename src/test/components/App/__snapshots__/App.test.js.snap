@@ -1,7 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`App Should render without failing 1`] = `
 <div
-  className="app">
+  className="app"
+>
   <Connect(ItemCreator) />
-  <Connect(Component) />
+  <Connect(ItemsList) />
 </div>
 `;
