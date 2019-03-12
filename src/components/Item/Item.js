@@ -11,7 +11,7 @@ export const Item = ({ ElementType = 'li', color, children, className }) => (
 )
 
 Item.propTypes = {
-  className: PropTypes.string.isRequired
+  className: PropTypes.string.isRequired,
 }
 
 export default Item

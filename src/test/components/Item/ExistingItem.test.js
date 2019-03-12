@@ -77,19 +77,28 @@ describe('ExistingItem', () => {
       expect(renderedItem.find(Item).find('p').props().children).to.equal(defaultProps.item.content)
     })
 
-    it('The remaining children should be anchors that implement onDoneClick and onRemoveClick properties', () => {
+    it('The remaining children should be buttons that implement onDoneClick and onRemoveClick properties (not completed)', () => {
       const renderedItem = shallow(
         <ExistingItem {...defaultProps} />
       )
 
-      expect(renderedItem.find(Item).find('a').get(0).props.className).to.equal('icon icono-cross')
-      expect(renderedItem.find(Item).find('a').get(0).props.onClick).to.equal(defaultProps.onDoneClick)
+      expect(renderedItem.find(Item).find('button').get(0).props.className).to.equal('icon icono-check')
+      expect(renderedItem.find(Item).find('button').get(0).props.onClick).to.equal(defaultProps.onDoneClick)
 
-      expect(renderedItem.find(Item).find('a').get(1).props.className).to.equal('icon icono-check')
-      expect(renderedItem.find(Item).find('a').get(1).props.onClick).to.equal(defaultProps.onDoneClick)
+      expect(renderedItem.find(Item).find('button').get(1).props.className).to.equal('icon icono-trash')
+      expect(renderedItem.find(Item).find('button').get(1).props.onClick).to.equal(defaultProps.onRemoveClick)
+    })
 
-      expect(renderedItem.find(Item).find('a').get(2).props.className).to.equal('icon icono-trash')
-      expect(renderedItem.find(Item).find('a').get(2).props.onClick).to.equal(defaultProps.onRemoveClick)
+    it('The remaining children should be buttons that implement onDoneClick and onRemoveClick properties (completed)', () => {
+      const renderedItem = shallow(
+        <ExistingItem {...defaultProps} item={{ ...defaultProps.item, completed: true }} />
+      )
+
+      expect(renderedItem.find(Item).find('button').get(0).props.className).to.equal('icon icono-cross')
+      expect(renderedItem.find(Item).find('button').get(0).props.onClick).to.equal(defaultProps.onDoneClick)
+
+      expect(renderedItem.find(Item).find('button').get(1).props.className).to.equal('icon icono-trash')
+      expect(renderedItem.find(Item).find('button').get(1).props.onClick).to.equal(defaultProps.onRemoveClick)
     })
   })
 })

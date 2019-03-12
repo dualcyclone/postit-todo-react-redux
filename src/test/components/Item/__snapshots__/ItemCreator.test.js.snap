@@ -17,11 +17,11 @@ exports[`ItemCreator Should render without failing 1`] = `
     type="text"
     value=""
   />
-  <a
+  <button
     className="icon icono-plusCircle"
     onClick={[Function]}
   >
     &nbsp
-  </a>
+  </button>
 </Item>
 `;

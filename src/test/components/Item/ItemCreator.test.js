@@ -64,8 +64,8 @@ describe('ItemCreator', () => {
         <ItemCreator {...defaultProps} />
       )
 
-      expect(renderedItem.find('a')).not.to.be.undefined
-      expect(renderedItem.find('a').props().className).to.equal('icon icono-plusCircle')
+      expect(renderedItem.find('button')).not.to.be.undefined
+      expect(renderedItem.find('button').props().className).to.equal('icon icono-plusCircle')
     })
   })
 
@@ -160,7 +160,7 @@ describe('ItemCreator', () => {
       const renderedItem = shallow(
         <ItemCreator {...defaultProps} />
       )
-      const itemCreatorAnchor = renderedItem.find('a')
+      const itemCreatorAnchor = renderedItem.find('button')
       const mockState = { inputValue: 'TEST ITEM' }
 
       renderedItem.setState(mockState)
@@ -175,7 +175,7 @@ describe('ItemCreator', () => {
       const renderedItem = shallow(
         <ItemCreator {...defaultProps} />
       )
-      const itemCreatorAnchor = renderedItem.find('a')
+      const itemCreatorAnchor = renderedItem.find('button')
       const mockState = { inputValue: '' }
 
       renderedItem.setState(mockState)

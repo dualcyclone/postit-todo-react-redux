@@ -19,14 +19,12 @@ export const ItemsList = ({ items }) => {
 }
 
 ItemsList.propTypes = {
-  items: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired,
 }
 
-const mapStateToProps = (state) => {
-  return {
-    items: state.items
-  }
-}
+const mapStateToProps = state => ({
+  items: state.items
+})
 
 export default connect(
   mapStateToProps

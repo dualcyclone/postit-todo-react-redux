@@ -6,11 +6,30 @@ import Item from './Item'
 import './styles.css'
 
 export class ItemCreator extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
+
     this.state = {
       inputValue: ''
     }
+
+    this.inputField = React.createRef()
+  }
+
+  handleAddItem() {
+    const { inputValue } = this.state
+
+    if (inputValue) {
+      this.props.onAdd(inputValue)
+    }
+
+    this.setState({ inputValue: '' })
+  }
+
+  updateInputValue(evt) {
+    this.setState({
+      inputValue: evt.target.value
+    })
   }
 
   render() {
@@ -18,7 +37,7 @@ export class ItemCreator extends Component {
       <Item ElementType="div" className="itemCreator">
         <p>Add another item...</p>
         <textarea
-          ref="inputField"
+          ref={this.inputField}
           className="itemCreator-input"
           type="text"
           rows="8"
@@ -26,29 +45,15 @@ export class ItemCreator extends Component {
           onKeyPress={(e) => {
             if (e.key === 'Enter') {
               e.preventDefault()
-              this.props.onAdd(this.state.inputValue)
-              this.setState({
-                inputValue: ''
-              })
+              this.handleAddItem()
             }
           }}
           value={this.state.inputValue}
           onChange={evt => this.updateInputValue(evt)}
         />
-        <a onClick={() => {
-            this.state.inputValue && this.props.onAdd(this.state.inputValue)
-            this.setState({
-              inputValue: ''
-            })
-          }} className="icon icono-plusCircle">&nbsp</a>
+        <button onClick={() => this.handleAddItem()} className="icon icono-plusCircle">&nbsp</button>
       </Item>
     )
-  }
-
-  updateInputValue(evt) {
-    this.setState({
-      inputValue: evt.target.value
-    })
   }
 }
 

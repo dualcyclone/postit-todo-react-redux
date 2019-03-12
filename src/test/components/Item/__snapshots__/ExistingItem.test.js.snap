@@ -8,23 +8,17 @@ exports[`ExistingItem Should render without failing 1`] = `
   <p>
     TEST TODO
   </p>
-  <a
-    className="icon icono-cross"
-    onClick={[Function]}
-  >
-    &nbsp
-  </a>
-  <a
+  <button
     className="icon icono-check"
     onClick={[Function]}
   >
     &nbsp
-  </a>
-  <a
+  </button>
+  <button
     className="icon icono-trash"
     onClick={[Function]}
   >
     &nbsp
-  </a>
+  </button>
 </Item>
 `;
